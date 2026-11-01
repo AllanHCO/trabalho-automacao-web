@@ -2,6 +2,8 @@
 
 Projeto Cypress para os casos de teste da aplicação [Automation Exercise](https://automationexercise.com/test_cases).
 
+Repositório: https://github.com/AllanHCO/trabalho-automacao-web
+
 Casos automatizados: **1, 2, 3, 4, 5, 8, 9, 10, 15 e 16**.
 
 ## Como executar
