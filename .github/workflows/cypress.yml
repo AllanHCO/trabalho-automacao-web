@@ -1,0 +1,42 @@
+name: Testes Cypress
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  interface:
+    name: Casos do trabalho final
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Executar os casos de teste
+        uses: cypress-io/github-action@v6
+        with:
+          install: false
+          browser: chrome
+          spec: cypress/e2e/trabalho-final/**/*.cy.js
+
+      - name: Publicar relatório Mochawesome
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-mochawesome
+          path: |
+            cypress/reports
+            cypress/screenshots
+          retention-days: 15
+          if-no-files-found: warn

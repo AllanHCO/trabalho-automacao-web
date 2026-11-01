@@ -1,0 +1,18 @@
+export const mensagens = {
+  novoUsuario: 'New User Signup!',
+  login: 'Login to your account',
+  credenciaisInvalidas: 'Your email or password is incorrect!',
+  emailExistente: 'Email Address already exist!',
+  informacoesDaConta: 'Enter Account Information',
+  contaCriada: 'Account Created!',
+  contaExcluida: 'Account Deleted!',
+  logadoComo: 'Logged in as',
+  inscricao: 'You have been successfully subscribed!',
+  todosOsProdutos: 'All Products',
+  produtosBuscados: 'Searched Products',
+  produtoAdicionado: 'Your product has been added to cart.',
+  endereco: 'Address Details',
+  revisao: 'Review Your Order',
+  pedidoRealizado: 'Order Placed!',
+  pedidoConfirmado: 'Congratulations! Your order has been confirmed!',
+}
